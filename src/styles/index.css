@@ -1,0 +1,16 @@
+:root{
+ --red: red;
+}
+
+.item-1{
+    color: var(--red);
+}
+.item-2{
+    
+}
+.item-3{
+    
+}
+.item-4{
+    
+}
