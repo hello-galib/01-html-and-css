@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
-
+ 
 :root{
     --h1: 2.5rem;
     --h2: 2rem;
@@ -52,7 +52,7 @@
  font-family: var(--font-2);
  border: none;
  border-radius: 8px;
- padding: 10px 25px;
+ padding: 0.625rem 0.9375rem;
  color: var(--color-dark-100);
  background-color: var(--color-white-100);
 }
@@ -121,6 +121,7 @@
     color: var(--color-white-100);
     text-decoration: none;
 }
+
 .navbar__icons{
     display: none;
 }
@@ -135,6 +136,28 @@
 .container{
     max-width: 71.25rem;
     margin: auto;
+    align-items: center;
+}
+.responsive-image{
+    max-width: 100%;
+    height: auto;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    padding: 1.875rem 0px;
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.common-title{
+    text-transform: capitalize;
+    font-size: var(--h1);
+    font-family: var(--font-1);
+    font-weight: bold;
 }
 
 @media (max-width: 75rem){
@@ -147,18 +170,39 @@
         max-width: 740px;
     }
 }
-@media (max-width: 48rem){ 
+@media (max-width: 768px){ 
     .container{
         max-width: 500px;
     }
+    
     .navbar__menu{
-        display: none;
+        z-index: 1;
+        position: absolute;
+        top: 9dvh;
+        background-color: var(--color-green-100);
+        width: 100%;
+        height: 100vh;
+        left: 0px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 40px;
     }
     .navbar__icons{
         display: block;
     }
+    .navbar__menu--1{
+        margin-top: -200px;
+    }
     .hide{
         display: none;
+    }
+    .hidden{
+        z-index: -1;
+        opacity: 0%;
     }
 }
 @media (max-width: 35.5rem){
